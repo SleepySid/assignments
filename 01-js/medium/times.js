@@ -9,5 +9,13 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
-    return 0.01;
+    const initail = Date.now()
+    let sum = 0
+    for(let num = 1 ;num <= n;num++){
+        sum++
+    }
+    const final = Date.now()
+    return (final-initail)/60
 }
+
+console.log(calculateTime(1000000000))

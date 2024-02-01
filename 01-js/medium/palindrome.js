@@ -4,7 +4,12 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  const clearString = str.replace(/\s|[^\w\s]/g ,"").toLowerCase().trim()
+  if(clearString === clearString.split("").reverse().join(""))
+  {
+    return true
+  }
+  return false
 }
-
+isPalindrome("Able, was I ere I saw Elba!")
 module.exports = isPalindrome;

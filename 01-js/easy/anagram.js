@@ -5,7 +5,16 @@
 */
 
 function isAnagram(str1, str2) {
-
+  if(str1.length != str2.length){
+    return false
+  }
+  const check = new Set([...(str1.toLowerCase())].sort())
+  for(letter of [...(str2.toLowerCase())].sort()){
+    console.log(letter)
+    if(!(check.has(letter))){
+      return false
+    }
+  }
+  return true
 }
-
 module.exports = isAnagram;
